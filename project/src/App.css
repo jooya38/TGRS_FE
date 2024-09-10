@@ -3,40 +3,145 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  --color-firstpg-background:#6E9DE8;
+  --color-background: #3368BD;
+  --color-purple:#C5BBFF;
+  --color-red: #FF4D4D;
+  --color-yellow: #E2FF32;
+  --color-btn-yellow: #FFFBA3;
+  --color-btn-black: #303C50;
+  --color-btn-gray: #676767;
+  --color-writebox: #979797;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  background-color: var(--color-firstpg-background);
+  color: white;
+  width: 300px;
+  height: auto;
+  text-align: center;
+  margin: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 스위치 wrapper 스타일 */
+.wrapper {
+  width: 125px;
+  height: 25px;
+  text-align: center;
+  margin: 25px auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#switch {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-.card {
-  padding: 2em;
+/* 스위치 레이블 스타일 (OFF 상태) */
+.switch_label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 58px;
+  height: 28px;
+  background: #fff;
+  border: 1px solid #daa;
+  border-radius: 20px;
+  transition: 0.2s;
 }
 
-.read-the-docs {
-  color: #888;
+.switch_label:hover {
+  background: #efefef;
+}
+
+/* 스위치 볼 (OFF 상태) */
+.onf_btn {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #daa;
+  transition: 0.2s;
+}
+
+/* checking style */
+#switch:checked + .switch_label {
+  background: var(--color-btn-yellow);
+  border: 1px solid var(--color-btn-yellow);
+}
+
+#switch:checked + .switch_label:hover {
+  background: var(--color-btn-yellow);
+}
+
+/* move */
+#switch:checked + .switch_label .onf_btn {
+  left: 34px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #00000020;
+}
+
+.toggle-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.toggle-button {
+  position: relative;
+  width: 200px;
+  background-color: var(--color-btn-gray);
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 기존 CSS에 추가 및 수정 */
+.toggle-option {
+  flex: 1;
+  text-align: center;
+  z-index: 2;
+  cursor: pointer;
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  color: white; /* 텍스트 색상 */
+}
+
+.toggle-indicator {
+  position: absolute;
+  width: 33.3%; /* 세 개의 옵션이므로 33.3% */
+  height: 100%;
+  background-color: #555;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.toggle-button a.active {
+  color:var(--color-btn-gray); /* 활성화된 링크의 텍스트 색상 */
+  background-color: white;
+  border-radius: 30px;
+}
+
+/* 각 위치로 이동하는 CSS 설정 */
+.toggle-button .toggle-option:nth-child(2):hover ~ .toggle-indicator {
+  transform: translateX(100%);
+}
+
+.toggle-button .toggle-option:nth-child(3):hover ~ .toggle-indicator {
+  transform: translateX(200%);
+}
+
+.toggle-button .toggle-option:nth-child(1):hover ~ .toggle-indicator {
+  transform: translateX(0);
 }

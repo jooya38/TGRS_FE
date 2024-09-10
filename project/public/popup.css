@@ -1,0 +1,109 @@
+/* popup.css */
+body {
+  background-color: var(--color-background);
+  color: white;
+  width: 300px;
+  height: auto;
+  text-align: center;
+  margin: 0;
+}
+
+/* popup.css */
+.lighthouse-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#lighthouse {
+  transition: opacity 0.5s ease-in-out;
+}
+
+@font-face {
+  font-family: 'SanTokki';
+  src: url('fonts/HSSanTokki2.0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SUITE';
+  src: url('fonts/SUITE-Bold.ttf') format('woff2');
+}
+
+
+.SUITE {
+  font-family: 'SUITE', sans-serif;
+}
+
+/* Toggle Button CSS */
+.toggle-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#resultMessage {
+  position: relative;
+  width: 200px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  color: var(--color-background);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.toggle-button {
+  position: relative;
+  width: 200px;
+  background-color: rgba(103, 103, 103, 0.5);
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 기존 CSS에 추가 및 수정 */
+.toggle-option {
+  flex: 1;
+  text-align: center;
+  z-index: 2;
+  cursor: pointer;
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  color: white; /* 텍스트 색상 */
+}
+
+.toggle-indicator {
+  position: absolute;
+  width: 33.3%; /* 세 개의 옵션이므로 33.3% */
+  height: 100%;
+  background-color: #555;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.toggle-button a.active {
+  color:rgba(110, 110, 110, 1); /* 활성화된 링크의 텍스트 색상 */
+}
+
+/* 각 위치로 이동하는 CSS 설정 */
+.toggle-button .toggle-option:nth-child(2):hover ~ .toggle-indicator {
+  transform: translateX(100%);
+}
+
+.toggle-button .toggle-option:nth-child(3):hover ~ .toggle-indicator {
+  transform: translateX(200%);
+}
+
+.toggle-button .toggle-option:nth-child(1):hover ~ .toggle-indicator {
+  transform: translateX(0);
+}
