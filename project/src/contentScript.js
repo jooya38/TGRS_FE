@@ -24,7 +24,7 @@ function checkUrlWithServer(url) {
     return fetch(`https://tgrs.api-jowonjae.kro.kr/check_url?url=${encodeURIComponent(url)}`)
         .then(response => response.json())
         .then(data => {
-            if (data.result === true) {  // 서버에서 true 응답을 받으면
+            if (data.is_fraud === true) {  // 서버에서 true 응답을 받으면
                 chrome.runtime.sendMessage({ action: "showPopup", data });
                 createPopup(data);
             }
