@@ -36,7 +36,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
         frequency: 1
     };
 
-    fetch('https://api.jowonjae.kro.kr/sites', {
+    fetch('https://tgrs.api-jowonjae.kro.kr/check_url', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -66,3 +66,4 @@ const Report_btn = document.getElementById("reportBtn");
 Report_btn.addEventListener('click', function() {
     document.write('<script src="./report.jsx"></script>');
 });
+

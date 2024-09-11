@@ -1,8 +1,27 @@
+// contentScript.js
 const url = window.location.href;
 console.log("Current tab URL: " + url);
 
+const http = require('http');
+const express = require('express');
+const app = express();
+const server = createServer(app);
+const cors = require('cors');
+
+const PORT = 8080;
+
+app.use(cors());
+
+app.get('/', (req, res) => {
+	res.send('Hello, World!');
+});
+
+server.listen(PORT, () => {
+	console.log(`Server running on ${PORT}`);
+});
+
 function checkUrlWithServer(url) {
-    return fetch(`https://api.jowonjae.kro.kr/joijui/sites?url=${encodeURIComponent(url)}`)
+    return fetch(`https://tgrs.api-jowonjae.kro.kr/check_url?url=${encodeURIComponent(url)}`)
         .then(response => response.json())
         .then(data => {
             if (data.result === true) {  // 서버에서 true 응답을 받으면
@@ -26,7 +45,7 @@ function createPopup(data) {
     const popup = document.createElement('div');
     popup.id = 'custom-popup';
 
-    fetch(chrome.runtime.getURL('warning.js'))
+    fetch(chrome.runtime.getURL('warning.html'))
         .then(response => response.text())
         .then(htmlContent => {
             popup.innerHTML = htmlContent;
@@ -52,7 +71,7 @@ function createPopup(data) {
 
 // 메시지를 받아 팝업을 생성
 chrome.runtime.onMessage.addListener((message, sender) => {
-    if (message.action === 'showPopup') {
+    if (message.action === 'openPopup') {
         createPopup(message.data);
     }
 });

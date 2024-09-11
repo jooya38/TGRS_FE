@@ -1,7 +1,8 @@
+// background.js
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
-    if (message.action === "openPopup // not using anymore") {
+    if (message.action === "openPopup") {
         chrome.windows.create({
-            url: chrome.runtime.getURL("warning.jsx"),
+            url: chrome.runtime.getURL("warning.html"),
             type: "popup",
             width: 400,
             height: 300
@@ -15,5 +16,5 @@ chrome.runtime.onInstalled.addListener(() => {
   
   // 예: 브라우저 액션 클릭 시 팝업 표시
   chrome.action.onClicked.addListener((tab) => {
-    chrome.tabs.sendMessage(tab.id, { action: 'showPopup' });
+    chrome.tabs.sendMessage(tab.id, { action: 'openPopup' });
   });

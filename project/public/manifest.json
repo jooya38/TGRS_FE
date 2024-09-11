@@ -4,7 +4,7 @@
     "description": "사기 사이트 알리미",
     "manifest_version": 3,
     "host_permissions": [
-      "*://*/*"
+      "https://tgrs.api-jowonjae.kro.kr/*"
     ],
     "background": {
       "service_worker": "background.js"
@@ -18,7 +18,7 @@
     ],
     "web_accessible_resources": [
       {
-        "resources": ["warning.js", "tailwind.css"],
+        "resources": ["warning.html", "tailwind.css"],
         "matches": ["<all_urls>"]
       }
     ],
