@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <h3 class="SanTokki" style="text-align: left; margin-top: 6px; margin-left: 10px;">딱걸렸어 솔루션</h3>
+    <div class="lighthouse-container">
+        <img id="lighthouse" src="images/lighthouse_on.png" alt="Lighthouse">
+    </div>
+    <h1 class="text-7xl font-bold underline SanTokki">딱걸렸어</h1>
+    <div class="wrapper">
+        <input type="checkbox" id="switch" checked="true">
+        <label for="switch" class="switch_label">
+          <span class="onf_btn"></span>
+        </label>
+    </div>
+
+    <div class="toggle-button-container">
+      <div id="toggleButton" class="toggle-button">
+          <div class="toggle-indicator"></div>
+          <a href="popup.html" class="toggle-option">홈</a>
+          <a href="settings.html" class="toggle-option">설정</a>
+          <a href="report.html" class="toggle-option active">신고</a>
+      </div>
+  </div>
+
+    <!-- 외부 스크립트 파일 참조 -->
+    <script src="popup.js"></script>
+</body>
+</html>
