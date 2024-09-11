@@ -4,7 +4,7 @@ import './App.css'
 const App = () => {
 
   return (
-    <div>
+    <div className='body'>
       <h1 className="text-7xl font-bold underline">딱걸렸어</h1>
       <div className="wrapper">
           <input type="checkbox" id="switch" defaultChecked={true} />

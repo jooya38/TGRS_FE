@@ -15,7 +15,7 @@
   --color-writebox: #979797;
 }
 
-body {
+.body {
   background-color: var(--color-firstpg-background);
   color: white;
   width: 300px;
