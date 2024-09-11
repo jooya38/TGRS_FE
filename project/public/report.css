@@ -1,0 +1,90 @@
+/* General styles */
+body {
+    background-color: var(--color-background); /* Match the background color in the image */
+    font-family: 'SUITE', sans-serif;
+  }
+  
+.report-container {
+    text-align: center;
+    padding: 20px;
+}
+  
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.highlight {
+    color: var(--color-purple);
+}
+  
+.lighthouse-icon img {
+    margin-top: 20px;
+    width: 100px;
+    height: auto;
+}
+  
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+  
+/* Input form styling */
+.input-container {
+    margin-top: 20px;
+}
+  
+.input-container label {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: white;
+}
+  
+.input-container input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 3px solid var(--color-writebox);
+}
+  
+#submitBtn {
+    background-color: white;
+    color: var(--color-background);
+    padding: 10px 20px;
+    border: 3px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+  
+#submitBtn:hover {
+    background-color: var(--color-firstpg-background);
+    color: white;
+}
+  
+/* Home button styling */
+.home-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+  
+.home-button:hover {
+    opacity: 0.8;
+}
+  
+/* Result message */
+#resultMessage {
+    color: var(--color-red);
+    background-color: white;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+  

@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: 'SUITE', sans-serif;
   --color-firstpg-background:#6E9DE8;
   --color-background: #3368BD;
   --color-purple:#C5BBFF;
@@ -20,6 +21,7 @@ body {
   width: 300px;
   height: auto;
   text-align: center;
+  font-family: 'SUITE', sans-serif;
   margin: 0;
 }
 

@@ -26,7 +26,7 @@ function createPopup(data) {
     const popup = document.createElement('div');
     popup.id = 'custom-popup';
 
-    fetch(chrome.runtime.getURL('warning.html'))
+    fetch(chrome.runtime.getURL('warning.js'))
         .then(response => response.text())
         .then(htmlContent => {
             popup.innerHTML = htmlContent;

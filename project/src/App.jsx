@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 
 const App = () => {
+
   return (
     <div>
       <h1 className="text-7xl font-bold underline">딱걸렸어</h1>
@@ -14,9 +15,9 @@ const App = () => {
       <div className="toggle-button-container">
         <div id="toggleButton" className="toggle-button">
           <div className="toggle-indicator"></div>
-          <a href="popup.html" className="toggle-option active">홈</a>
-          <a href="settings.html" className="toggle-option">설정</a>
-          <a href="report.html" className="toggle-option">신고</a>
+          <a href="App.js" className="toggle-option active">홈</a>
+          <a href="settings.js" className="toggle-option">설정</a>
+          <a href="report.jsx" className="toggle-option">신고</a>
         </div>
       </div>
       <div>

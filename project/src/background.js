@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
     if (message.action === "openPopup // not using anymore") {
         chrome.windows.create({
-            url: chrome.runtime.getURL("warning.html"),
+            url: chrome.runtime.getURL("warning.jsx"),
             type: "popup",
             width: 400,
             height: 300
