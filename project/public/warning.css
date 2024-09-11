@@ -14,8 +14,8 @@
 
   /* 팝업 컨테이너 */
   .popup {
-    background-color: #333;
-    color: #fff;
+    background-color: #3368BD;
+    color: white;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
@@ -27,7 +27,7 @@
   .popup-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:start;
     font-size: 18px;
     margin-bottom: 10px;
   }
@@ -35,7 +35,7 @@
   /* 경고 아이콘 */
   .alert-icon {
     font-size: 50px;
-    color: red;
+    color: #FF4D4D;
     margin-bottom: 15px;
   }
 
@@ -46,7 +46,7 @@
   }
 
   .highlight {
-    color: red;
+    color: #FF4D4D;
     font-family: 'SUITE-ExtraBold';
   }
 
@@ -74,9 +74,23 @@
     color: white;
   }
 
+  .btn-primary:hover {
+    background-color: #3368BD;
+    color: white;
+  }
+
   .btn-secondary {
-    color: red;
+    color: white;
     background-color: transparent;
+    text-decoration: underline;
+    text-decoration-color: white;
+  }
+
+  .btn-secondary:active {
+    color: #979797;
+    background-color: transparent;
+    text-decoration: underline;
+    text-decoration-color: #979797;
   }
 
   @font-face {

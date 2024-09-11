@@ -43,6 +43,7 @@
       "webNavigation",
       "storage",
       "cookies",
-      "scripting"
+      "scripting",
+      "activeTab"
     ]
   }
