@@ -7,7 +7,7 @@ const Report = () => {
   return (
     <div>
       <h3 className="SUITE" style={{ textAlign: 'left', marginTop: '6px', marginLeft: '10px' }}>
-        딱걸렸어 <span style={{ color: rgba(255, 77, 77, 1)}}>경고 팝업업</span>
+        딱걸렸어 <span style={{ color: rgba(255, 77, 77, 1)}}>경고 팝업</span>
       </h3>
 
       <img src="images/lighthouse_on.png" alt="Lighthouse" />
