@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './popup.css';  // 스타일 파일 import
 // import FontAwesome from '@expo/vector-icons/FontAwesome'; //home btn
-import { FaHome } from 'react-icons/fa'; // FontAwesome에서 홈 아이콘 가져오기
+// import { FaHome } from 'react-icons/fa'; // FontAwesome에서 홈 아이콘 가져오기
 
 const Report = () => {
   // React에서 상태 관리 (예: 제출 결과 메시지 관리)
@@ -14,7 +14,7 @@ const Report = () => {
 
   return (
     <div>
-      <h3 className="SanTokki" style={{ textAlign: 'left', marginTop: '6px', marginLeft: '10px' }}>
+      <h3 className="SUITE" style={{ textAlign: 'left', marginTop: '6px', marginLeft: '10px' }}>
         딱걸렸어 <span style={{ color: rgb(197, 187, 255) }}>신고 페이지</span>
       </h3>
       <button onClick={() => alert('홈 버튼 클릭됨!')} style={{ backgroundColor: 'transparent', border: 'none' }}>
