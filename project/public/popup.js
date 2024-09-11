@@ -60,3 +60,9 @@ document.getElementById('submitBtn').addEventListener('click', function() {
         resultMessage.style.display = 'block';
     });
 });
+
+const Report_btn = document.getElementById("reportBtn");
+
+Report_btn.addEventListener('click', function() {
+    document.write('<script src="./report.jsx"></script>');
+});

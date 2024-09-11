@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사기경고 팝업</title>
+  <style>
+    /* 팝업 배경 설정 */
+    .popup-overlay {
+      position: fixed;
+      top: 20px;
+      left: -20px;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      display: flex;
+      justify-content: flex-end; /* 팝업을 오른쪽 정렬 */
+    align-items: flex-start; /* 팝업을 위쪽 정렬 */
+      z-index: 9999;
+    }
+
+    /* 팝업 컨테이너 */
+    .popup {
+      background-color: #333;
+      color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 팝업 헤더 스타일 */
+    .popup-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* 경고 아이콘 */
+    .alert-icon {
+      font-size: 50px;
+      color: red;
+      margin-bottom: 15px;
+    }
+
+    /* 신고 정보 스타일 */
+    .popup-body p {
+      margin: 10px 0;
+      line-height: 1.5;
+    }
+
+    .highlight {
+      color: red;
+      font-family: 'SUITE-ExtraBold';
+    }
+
+    .report-type {
+      color: orange;
+    }
+
+    .report-details {
+      color: yellow;
+    }
+
+    /* 버튼 스타일 */
+    .btn {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .btn-secondary {
+      color: red;
+      background-color: transparent;
+    }
+
+    @font-face {
+      font-family: 'SUITE';
+      src: url('../fonts/SUITE-Regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'SUITE-Extrabold';
+      src: url('../fonts/SUITE-ExtraBold.woff2') format('woff2');
+    }
+
+    .suite-font {
+      font-family: 'SUITE', sans-serif;
+    }
+
+  </style>
+</head>
+<body>
+    <div class="popup-overlay">
+        <div class="popup suite-font">
+          <div class="popup-header">
+            <div>딱걸렸어 <span class="highlight">경고 팝업</span></div>
+          </div>
+          <div class="popup-body">
+            <div class="alert-icon">⚠️</div>
+            <p>현재 접속하신 사이트 / 품목은<br><span class="highlight">사기 신고</span>가 접수된 사이트 / 품목입니다.</p>
+            <p>신고자: <span id="from" class="report-type">신고자</span><br>
+              신고 사유: <span id="reason" class="report-details">사기 사유</span><br>
+              신고 횟수: <span id="frequency">횟수</span></p>
+          </div>
+          <div class="popup-footer">
+            <a href="#" class="btn btn-primary">안전한 페이지로 돌아가기</a>
+            <a href="#" class="btn btn-secondary">링크 신뢰 후 계속 진행하기 (권장하지 않음)</a>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

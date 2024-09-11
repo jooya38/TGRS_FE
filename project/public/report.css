@@ -1,9 +1,18 @@
 /* General styles */
 body {
-    background-color: var(--color-background); /* Match the background color in the image */
+    background-color: #6E9DE8;
     font-family: 'SUITE', sans-serif;
+    color: white;
+    width: 300px;
+    height: auto;
+    text-align: center;
+    margin: 0;
   }
-  
+
+img{
+    width: 250px;
+}
+
 .report-container {
     text-align: center;
     padding: 20px;
@@ -16,7 +25,7 @@ body {
 }
   
 .highlight {
-    color: var(--color-purple);
+    color: #C5BBFF;
 }
   
 .lighthouse-icon img {
@@ -26,19 +35,19 @@ body {
 }
   
 .title {
-    font-size: 2rem;
+    font-size: 5rem;
     font-weight: bold;
     margin-top: 20px;
 }
   
 /* Input form styling */
 .input-container {
-    margin-top: 20px;
+    margin-top: 0px;
 }
   
 .input-container label {
     display: block;
-    font-size: 2rem;
+    font-size: 1rem;
     margin-bottom: 8px;
     color: white;
 }
@@ -48,12 +57,12 @@ body {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    border: 3px solid var(--color-writebox);
+    border: 3px solid #979797;
 }
   
 #submitBtn {
     background-color: white;
-    color: var(--color-background);
+    color: #3368BD;
     padding: 10px 20px;
     border: 3px solid;
     border-radius: 10px;
@@ -62,7 +71,7 @@ body {
 }
   
 #submitBtn:hover {
-    background-color: var(--color-firstpg-background);
+    background-color: #6E9DE8;
     color: white;
 }
   
@@ -82,9 +91,11 @@ body {
   
 /* Result message */
 #resultMessage {
-    color: var(--color-red);
+    color: #FF4D4D;
     background-color: white;
     font-size: 1rem;
     margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
   
